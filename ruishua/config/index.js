@@ -1,4 +1,10 @@
 /*
+ * @Author: Your name
+ * @Date:   2020-04-17 13:45:57
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2020-04-17 15:12:38
+ */
+/*
  * @Author: your name
  * @Date: 2020-04-16 22:36:01
  * @LastEditTime: 2020-04-17 00:30:23
@@ -21,15 +27,15 @@ module.exports = {
     proxyTable: {
       '/api': {
         secure: true,
-        target: 'https://api.coindesk.com/', // 设置你调用的接口域名   
+        target: 'https://www.goodday6789.com:8085/', // 设置你调用的接口域名   
         changeOrigin: true,
         pathRewrite: { '^/api': '/' }
       }
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8086, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: 'debug.goodday6789.com', // can be overwritten by process.env.HOST
+    port: 8085, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,

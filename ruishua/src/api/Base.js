@@ -1,4 +1,10 @@
 /*
+ * @Author: Your name
+ * @Date:   2020-04-17 12:04:47
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2020-04-17 15:11:43
+ */
+/*
  * @Author: 陶务华
  * @Date: 2020-04-16 22:49:27
  * @LastEditTime: 2020-04-17 00:29:50
@@ -9,8 +15,8 @@
  */
 
 const base = {
-  develop: 'https://api.coindesk.com/',
-  production: 'https://www.goodday6789.com:8085/'
+  localDebug: 'http://debug.goodday6789.com:8085',//本地调试
+  develop: 'http://debug.goodday6789.com:8085',
+  production: 'https://www.goodday6789.com:8085'
 }
-
 export default base

@@ -8,9 +8,10 @@
  -->
 # ruishua
 - ctrl+alt+i 生成头部注释
-[创建项目](https://juejin.im/post/5d4d2fc3f265da03c23ec246)
-- 命名规范 组件名和类首字母大写，文件夹分隔符命名法 https://www.jianshu.com/p/7e397fc3dd5c
+- [创建项目](https://juejin.im/post/5d4d2fc3f265da03c23ec246)
+- [命名规范 组件名和类首字母大写，文件夹分隔符命名法](https://www.jianshu.com/p/7e397fc3dd5c)
 - 跨域本地调试，通过在config------index.js里面的proxyTable进行配置,实现node的转发
+- [vuex的使用文档](https://vuex.vuejs.org/zh/guide/state.html)
 
 > 集成一个demo
 

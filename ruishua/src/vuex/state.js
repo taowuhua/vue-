@@ -9,5 +9,5 @@
 
 export default{
   title: '首页',
-  token: ''
+  token: window.localStorage.getItem('access-token')
 }

@@ -1,4 +1,10 @@
 /*
+ * @Author: Your name
+ * @Date:   2020-04-17 13:51:01
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2020-04-17 13:51:01
+ */
+/*
  * @Author: 陶务华
  * @Date: 2020-04-16 23:38:33
  * @LastEditTime: 2020-04-16 23:57:57
@@ -74,6 +80,7 @@ const errorHandle = (status, other) => {
 var instance = axios.create({ timeout: 1000 * 12})
 // 设置post请求头
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+instance.defaults.withCredentials = true
 /**
  * 请求拦截器
  * 每次请求前，如果存在token则在请求头中携带token

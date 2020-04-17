@@ -1,4 +1,10 @@
 /*
+ * @Author: Your name
+ * @Date:   2020-04-17 14:04:17
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2020-04-17 14:45:33
+ */
+/*
  * @Author: 陶务华
  * @Date: 2020-04-16 22:48:23
  * @LastEditTime: 2020-04-16 23:45:46
@@ -8,6 +14,9 @@
  * @FilePath: \ruishua\src\http\index.js
  */
 
-import login from '@/api/Login'
+import loginModule from '@/api/Login'
 
-export default login
+export default {    
+    loginModule,
+    // ……
+}
