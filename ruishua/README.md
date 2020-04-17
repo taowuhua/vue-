@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-16 23:12:19
+ * @LastEditTime: 2020-04-17 21:36:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\README.md
@@ -12,7 +12,28 @@
 - [命名规范 组件名和类首字母大写，文件夹分隔符命名法](https://www.jianshu.com/p/7e397fc3dd5c)
 - 跨域本地调试，通过在config------index.js里面的proxyTable进行配置,实现node的转发
 - [vuex的使用文档](https://vuex.vuejs.org/zh/guide/state.html)
+- vuex 的使用,在组件中引入mapstate, import {mapState} from 'vuex' ;然后根据具体情况进行数据的存储,第一种情况(键值相同的情况)：
+ ```
+ computed: mapState([
+    'title'
+  ]),
+```
+第二种情况：
+```
+computed: mapState({
+    // 箭头函数可使代码更简练
+    count: state => state.count,
 
+    // 传字符串参数 'count' 等同于 `state => state.count`
+    countAlias: 'count',
+
+    // 为了能够使用 `this` 获取局部状态，必须使用常规函数
+    countPlusLocalState (state) {
+      return state.count + this.localCount
+    }
+  })
+```
+  [详情看文档](https://vuex.vuejs.org/zh/guide/state.html)
 > 集成一个demo
 
 ## Build Setup

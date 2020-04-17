@@ -1,7 +1,7 @@
 /*
  * @Author: 陶务华
  * @Date: 2020-04-16 23:48:20
- * @LastEditTime: 2020-04-16 23:52:56
+ * @LastEditTime: 2020-04-17 20:19:20
  * @LastEditors: Please set LastEditors
  * @Description: 实例化store
  * @FilePath: \ruishua\src\vuex\index.js

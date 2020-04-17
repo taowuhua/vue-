@@ -1,13 +1,7 @@
 /*
- * @Author: Your name
- * @Date:   2020-04-17 13:58:38
- * @Last Modified by:   Your name
- * @Last Modified time: 2020-04-17 14:00:39
- */
-/*
  * @Author: your name
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-16 23:53:49
+ * @LastEditTime: 2020-04-17 20:26:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\src\main.js
@@ -24,6 +18,7 @@ Vue.config.productionTip = false
 Vue.prototype.$api = api
 
 /* eslint-disable no-new */
+// 将状态从根组件“注入”到每一个子组件中（需调用 Vue.use(Vuex)）
 new Vue({
   el: '#app',
   router,

@@ -1,7 +1,7 @@
 <!--
  * @Author:陶务华
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-17 00:28:30
+ * @LastEditTime: 2020-04-18 00:00:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\src\components\HelloWorld.vue
@@ -9,70 +9,82 @@
 <template>
   <div class="hello">
     <input ref="inputValue"/>
-    <input type="text" name="提交"  @click="submit">
-    <p>{{title}}</p>
+    <button @click="submit">提交</button>
+    <p>{{getTitle}}</p>
+    <button @click="modify">修改</button>
   </div>
 </template>
 
 <script>
-import CryptoJS from "crypto-js";
+import CryptoJS from 'crypto-js'
+import {mapState} from 'vuex'
 export default {
-  name: "HelloWorld",
-  data() {
+  name: 'HelloWorld',
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App",
-      authCode:'',
-    };
-  },
-  created() {
-    this.onload();
-  },
-  mounted(){
-   
-  },
-  computed: {
-    title () {
-    console.log('title==='+store.state.title)
-      return this.$store.state.title
+      msg: 'Welcome to Your Vue.js App',
+      authCode: ''
     }
   },
+  created () {
+    this.onload()
+  },
+  mounted () {
+  },
+  // computed: {
+  //   title () {
+  //     return this.$store.state.title
+  //   },
+  //   getTitle () {
+  //     return this.$store.getters.getTitle
+  //   }
+  // },
+  computed: mapState({
+    title: 'title',
+    getTitle () {
+      return this.$store.getters.getTitle
+    }
+  }),
   methods: {
-    onload() {
+    modify () {
+      return this.$store.commit('modifyTitle')
+    },
+    onload () {
       this.$api.loginModule
         .refreshAuthImage()
         .then(res => {
-          
+
         })
         .catch(value => {
-          console.log("数据请求失败===" + value);
-        });
+          console.log('数据请求失败===' + value)
+        })
     },
-    requestLogin(){
-      let sn = Math.random().toString() + Math.random().toString();
-          let rand = Math.random().toString();
-          let epoch_time = new Date().getTime();
-          var secret = CryptoJS.HmacMD5(rand + epoch_time.toString(),"fkamsl2k34j56lbo0s8f4md0x8z").toString();
-          var that = this;
-          let requestData = {
-            sn: sn,
-            data: {name:"jerry",secret: secret,times: epoch_time,rand: rand,validateCode: that.$refs.inputValue.value
-            }
-          };
-          this.$api.loginModule.login(requestData)
-            .then(res=>{
-              // console.log("数据请求成功===" + JSON.stringify(res));
-              let token = res.data.data.token;
-               console.log("数据请求成功===" + token);
-             window.localStorage.setItem("access-token", token);
-            }).catch(err=>{
-            console.log("fail===" + JSON.stringify(err));
-            }) ;
+    requestLogin () {
+      let sn = Math.random().toString() + Math.random().toString()
+      let rand = Math.random().toString()
+      let epochTime = new Date().getTime()
+      var secret = CryptoJS.HmacMD5(rand + epochTime.toString(), 'fkamsl2k34j56lbo0s8f4md0x8z').toString()
+      var that = this
+      let requestData = {
+        sn: sn,
+        data: {name: 'jerry', secret: secret, times: epochTime, rand: rand, validateCode: that.$refs.inputValue.value
+        }
+      }
+      this.$api.loginModule.login(requestData)
+        .then(res => {
+          // console.log("数据请求成功===" + JSON.stringify(res));
+          let token = res.data.data.token
+          console.log('数据请求成功===' + token)
+          window.localStorage.setItem('access-token', token)
+        }).catch(err => {
+          console.log('fail===' + JSON.stringify(err))
+        })
     },
-    submit(){
+    submit () {
       this.requestLogin()
     }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
