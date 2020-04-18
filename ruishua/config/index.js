@@ -1,13 +1,8 @@
-/*
- * @Author: Your name
- * @Date:   2020-04-17 13:45:57
- * @Last Modified by:   Your name
- * @Last Modified time: 2020-04-17 15:12:38
- */
+
 /*
  * @Author: your name
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-18 22:45:24
+ * @LastEditTime: 2020-04-18 23:09:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\config\index.js

@@ -1,7 +1,7 @@
 <!--
  * @Author:陶务华
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-18 00:00:57
+ * @LastEditTime: 2020-04-18 23:37:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\src\components\HelloWorld.vue
@@ -11,7 +11,8 @@
     <input ref="inputValue"/>
     <button @click="submit">提交</button>
     <p>{{getTitle}}</p>
-    <button @click="modify">修改</button>
+    <button @click="modify">同步mutations修改</button>
+    <button @click="syncModify">异步actions修改</button>
   </div>
 </template>
 
@@ -46,8 +47,11 @@ export default {
     }
   }),
   methods: {
+    syncModify () {
+      return this.$store.dispatch('modifytitle', 'zhazha')
+    },
     modify () {
-      return this.$store.commit('modifyTitle')
+      return this.$store.commit('modifyTitle', '同步渣渣')
     },
     onload () {
       this.$api.loginModule
@@ -89,19 +93,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
