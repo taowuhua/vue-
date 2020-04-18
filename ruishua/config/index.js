@@ -7,7 +7,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-17 00:30:23
+ * @LastEditTime: 2020-04-18 22:45:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\config\index.js
@@ -28,13 +28,14 @@ module.exports = {
       '/api': {
         secure: true,
         target: 'https://www.goodday6789.com:8085/', // 设置你调用的接口域名   
+        // target: 'http://yantai.amiliko.cn/', // 设置你调用的接口域名   
         changeOrigin: true,
         pathRewrite: { '^/api': '/' }
       }
     },
 
     // Various Dev Server settings
-    host: 'debug.goodday6789.com', // can be overwritten by process.env.HOST
+    host: '127.0.0.1', // can be overwritten by process.env.HOST
     port: 8085, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,

@@ -7,7 +7,7 @@
 /*
  * @Author: 陶务华
  * @Date: 2020-04-16 22:48:54
- * @LastEditTime: 2020-04-17 00:27:58
+ * @LastEditTime: 2020-04-18 22:45:42
  * @LastEditors: Please set LastEditors
  * @Description: 业务相关接口在这里进行封装然后注册到index.js里面
  * 后面引入main.js放在vue的原型供全局使用，这是登录模块
