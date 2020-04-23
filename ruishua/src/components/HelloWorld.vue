@@ -1,7 +1,7 @@
 <!--
  * @Author:陶务华
  * @Date: 2020-04-16 22:36:01
- * @LastEditTime: 2020-04-19 01:00:37
+ * @LastEditTime: 2020-04-23 22:10:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ruishua\src\components\HelloWorld.vue
@@ -93,6 +93,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style   lang="scss" scoped>
+@import '@/sass/common.scss'
 
 </style>
